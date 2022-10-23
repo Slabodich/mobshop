@@ -34,6 +34,7 @@
 
         max-height: 900px;
         margin: 0 auto;
+        padding: 50px;
 
 
     }

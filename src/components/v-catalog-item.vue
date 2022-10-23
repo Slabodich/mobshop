@@ -3,7 +3,10 @@
         <img :src=" require('../assets/images/' + product_data.image) " alt="webp">
         <p class="v-catalog-item__name">{{product_data.name}}</p>
         <p class="v-catalog-item__price">Price: {{product_data.price}}</p>
-        <button class="v-catalog-item__add_to_cart_btn btn">Add to cart</button>
+        <button
+                class="v-catalog-item__add_to_cart_btn btn" @click="sendDataToParent">
+            Add to cart
+        </button>
     </div>
 </template>
 
@@ -17,6 +20,11 @@
                     return {}
                 }
             }
+        },
+        methods: {
+            sendDataToParent(){
+                this.$emit('sendArticle', this.product_data.article)
+            }
         }
     }
 </script>
@@ -27,5 +35,6 @@
      box-shadow: 0 0 8px 0 #2c3e50;
      padding: $padding*2;
      margin-bottom: $margin*2;
+     margin-top: $margin*2;
  }
 </style>

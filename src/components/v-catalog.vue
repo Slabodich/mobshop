@@ -4,53 +4,40 @@
     </div>
     <div class="v-catalog__list">
         <v-catalog-item
-            v-for="prodact in products"
-            :key="prodact.article"
-            :product_data="prodact"
+            v-for="product in PRODUCTS"
+            :key="product.article"
+            :product_data="product"
+            @sendArticle="showArticle"
         />
     </div>
 </template>
 
 <script>
     import vCatalogItem from './v-catalog-item'
+    import {mapActions, mapGetters} from 'vuex'
+
     export default {
         name: "v-catalog",
         components: {
             vCatalogItem
         },
         data(){
-            return{
-                products : [
-                    {
-                        image: "1.webp",
-                        name: "iphone 11 pro",
-                        price: 60000,
-                        article: "mob1",
-                        available: true
-                    },
-                    {
-                        image: "2.webp",
-                        name: "samsung galaxy s20",
-                        price: 55000,
-                        article: "mob2",
-                        available: true
-                    },
-                    {
-                        image: "2.webp",
-                        name: "samsung galaxy s20",
-                        price: 55000,
-                        article: "mob3",
-                        available: true
-                    },
-                    {
-                        image: "2.webp",
-                        name: "samsung galaxy s20",
-                        price: 55000,
-                        article: "mob3",
-                        available: true
-                    }
-                ]
-            }
+            return {}
+        },
+        computed: {
+           ...mapGetters([
+               'PRODUCTS'
+           ]),
+
+        },
+        methods: {
+          ...mapActions([
+              'GET_PRODUCTS_FROM_API'
+          ]),
+        },
+        mounted() {
+            this.GET_PRODUCTS_FROM_API()
+
         }
     }
 </script>
