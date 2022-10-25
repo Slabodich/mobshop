@@ -3,11 +3,32 @@
 
 let store = new Vuex.Store({
     state:{
-        products: []
+        products: [],
+        cart: []
     },
     mutations:{
         SET_PRODUCTS_TO_STATE: (state, products) => {
             state.products = products;
+        },
+        SET_CART: (state, product) => {
+            if(state.cart.length){
+                let isProductExist = false
+                state.cart.map(function (item) {
+                    if(item.article === product.article){
+                        isProductExist = true
+                        item.quantity++
+                    }
+                })
+                if (!isProductExist){
+                    state.cart.push(product)
+                }
+            }else {
+                state.cart.push(product)
+            }
+        },
+        REMOVE_FROM_CART: (state, index) => {
+
+            state.cart.splice(index, 1)
         }
     },
     actions: {
@@ -22,11 +43,20 @@ let store = new Vuex.Store({
                 console.log(error)
                 return error;
             })
+        },
+        ADD_TO_CART(context, product) {
+            context.commit('SET_CART',product)
+        },
+        DELETE_FROM_CART(context, index) {
+            context.commit('REMOVE_FROM_CART', index)
         }
     },
     getters:{
         PRODUCTS(state) {
             return state.products;
+        },
+        CART(state){
+            return state.cart;
         }
     },
 

@@ -7,7 +7,7 @@
             v-for="product in PRODUCTS"
             :key="product.article"
             :product_data="product"
-            @sendArticle="showArticle"
+            @addToCart="addToCart"
         />
     </div>
 </template>
@@ -26,14 +26,18 @@
         },
         computed: {
            ...mapGetters([
-               'PRODUCTS'
+               'PRODUCTS',
            ]),
 
         },
         methods: {
           ...mapActions([
-              'GET_PRODUCTS_FROM_API'
+              'GET_PRODUCTS_FROM_API',
+              'ADD_TO_CART'
           ]),
+            addToCart(data){
+              this.ADD_TO_CART(data)
+            }
         },
         mounted() {
             this.GET_PRODUCTS_FROM_API()
