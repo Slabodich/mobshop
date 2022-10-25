@@ -6,7 +6,7 @@
             <p class="v-cart-item__price">Price: {{cart_item_data.price}}</p>
             <p class="v-cart-item__article">{{cart_item_data.article}}</p>
         </div>
-        <div class="v-cart-item__quantity">{{cart_item_data.quantity}}</div>
+        <div class="v-cart-item__quantity"> Qty: {{cart_item_data.quantity}}</div>
         <button
                 class="v-cart-item__delete_from_cart_btn btn"  @click="deleteFromCart">
 

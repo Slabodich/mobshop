@@ -25,6 +25,7 @@ let store = new Vuex.Store({
             }else {
                 state.cart.push(product)
             }
+
         },
         REMOVE_FROM_CART: (state, index) => {
 
@@ -57,6 +58,7 @@ let store = new Vuex.Store({
         },
         CART(state){
             return state.cart;
+
         }
     },
 
