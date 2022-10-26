@@ -6,10 +6,16 @@
             <p class="v-cart-item__price">Price: {{cart_item_data.price}}</p>
             <p class="v-cart-item__article">{{cart_item_data.article}}</p>
         </div>
-        <div class="v-cart-item__quantity"> Qty: {{cart_item_data.quantity}}</div>
+        <div class="v-cart-item__quantity">
+            <p>Qty:</p>
+            <span>
+                <span class="v-cart-item__quantity-btn" @click="decrementItem">-</span>
+                {{cart_item_data.quantity}}
+                <span class="v-cart-item__quantity-btn" @click="incrementItem">+</span>
+            </span>
+        </div>
         <button
                 class="v-cart-item__delete_from_cart_btn btn"  @click="deleteFromCart">
-
             Delete
         </button>
     </div>
@@ -26,14 +32,18 @@
                 }
             }
         },
-        mounted(){
-            const cartItemData = this.cart_item_data;
-            cartItemData.quantity = 1;
-        },
+
         methods: {
+
+            decrementItem(){
+                this.$emit('decrement')
+            },
+            incrementItem(){
+                this.$emit('increment')
+            },
             deleteFromCart(){
                 this.$emit('deleteFromCart')
-            }
+            },
         }
     }
 </script>
@@ -50,6 +60,9 @@
         margin-top: $margin*2;
         &__image{
             max-height: 100px;
+        }
+        &__quantity-btn{
+            cursor: pointer;
         }
     }
 </style>
