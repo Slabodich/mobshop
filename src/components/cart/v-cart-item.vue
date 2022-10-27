@@ -1,6 +1,6 @@
 <template>
     <div class="v-cart-item">
-        <img class="v-cart-item__image" :src=" require('../assets/images/' + cart_item_data.image) " alt="webp">
+        <img class="v-cart-item__image" :src=" require('../../assets/images/' + cart_item_data.image) " alt="webp">
         <div class="v-cart-item__info">
             <p class="v-cart-item__name">{{cart_item_data.name}}</p>
             <p class="v-cart-item__price">Price: {{cart_item_data.price}}</p>
@@ -63,6 +63,9 @@
         }
         &__quantity-btn{
             cursor: pointer;
+        }
+        &__delete_from_cart_btn{
+            background: $bg-delete;
         }
     }
 </style>

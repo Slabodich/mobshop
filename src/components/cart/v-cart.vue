@@ -81,7 +81,7 @@
             padding: $padding*2;
             display: flex;
             justify-content: center;
-            background: $bg;
+            background: $bg-add;
             color: #ffffff;
             font-size: 20px;
         }

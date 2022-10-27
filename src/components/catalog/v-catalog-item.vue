@@ -1,6 +1,6 @@
 <template>
     <div class="v-catalog-item">
-        <img :src=" require('../assets/images/' + product_data.image) " alt="webp">
+        <img :src=" require('../../assets/images/' + product_data.image) " alt="webp">
         <p class="v-catalog-item__name">{{product_data.name}}</p>
         <p class="v-catalog-item__price">Price: {{product_data.price}}</p>
         <button
@@ -40,5 +40,8 @@
      padding: $padding*2;
      margin-bottom: $margin*2;
      margin-top: $margin*2;
+     &__add_to_cart_btn{
+         background: $bg-add;
+     }
  }
 </style>
