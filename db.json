@@ -5,14 +5,24 @@
       "name": "iphone 11 pro",
       "price": 60000,
       "article": "mob1",
-      "available": true
+      "available": true,
+      "category": "Iphone"
     },
     {
       "image": "2.webp",
       "name": "samsung galaxy s20",
       "price": 55000,
       "article": "mob2",
-      "available": true
+      "available": true,
+      "category": "Samsung"
+    },
+    {
+      "image": "3.webp",
+      "name": "Xiaomi Redmi Note 10S",
+      "price": 15000,
+      "article": "mob3",
+      "available": true,
+      "category": "Xiaomi"
     }
   ]
 }
