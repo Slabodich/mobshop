@@ -2,27 +2,147 @@
   "products" : [
     {
       "image": "1.webp",
-      "name": "iphone 11 pro",
-      "price": 60000,
+      "name": "IPHONE 11 PRO",
+      "price": 41990,
       "article": "mob1",
       "available": true,
-      "category": "Iphone"
+      "category": "Apple",
+      "cp": " Apple A13 Bionic",
+      "ozy": "4 gb",
+      "battary": "3046mah",
+      "cam":"13mp"
+    },
+    {
+      "image": "7.jpg",
+      "name": "IPHONE 14 PRO MAX",
+      "price": 99990,
+      "article": "mob7",
+      "available": true,
+      "category": "Apple",
+      "cp": " Apple A16 Bionic",
+      "ozy": "8/12 gb",
+      "battery": "3460mah",
+      "cam":"32mp"
     },
     {
       "image": "2.webp",
-      "name": "samsung galaxy s20",
-      "price": 55000,
+      "name": "Samsung Galaxy S20",
+      "price": 29990,
       "article": "mob2",
       "available": true,
-      "category": "Samsung"
+      "category": "Samsung",
+      "cp": "Snapdragon 640",
+      "ozy": "6/8 gb",
+      "battary": "4500mah",
+      "cam":"32mp"
+    },
+    {
+      "image": "8.jpg",
+      "name": "Samsung Z Fold 4",
+      "price": 95990,
+      "article": "mob8",
+      "available": true,
+      "category": "Samsung",
+      "cp": "Snapdragon 8 Plus Gen 1",
+      "ozy": "8/12 gb",
+      "battary": "4900mah",
+      "cam":"64mp"
     },
     {
       "image": "3.webp",
-      "name": "Xiaomi Redmi Note 10S",
-      "price": 15000,
+      "name": "Xiaomi 12 PRO",
+      "price": 98880,
       "article": "mob3",
       "available": true,
-      "category": "Xiaomi"
+      "category": "Xiaomi",
+      "cp": "Snapdragon 8 Plus",
+      "ozy": "8/12 gb",
+      "battary": "5500mah",
+      "cam":"128mp"
+    },
+    {
+      "image": "9.jpg",
+      "name": "Xiaomi Redmi 4X",
+      "price": 7490,
+      "article": "mob9",
+      "available": true,
+      "category": "Xiaomi",
+      "cp": "Exynos 460",
+      "ozy": "4 gb",
+      "battary": "4100mah",
+      "cam":"32mp"
+    },
+    {
+      "image": "4.jpg",
+      "name": "Xiaomi Redmi Note 11",
+      "price": 24990,
+      "article": "mob4",
+      "available": true,
+      "category": "Xiaomi",
+      "cp": "Qualcomm Snapdragon 680",
+      "ozy": "8/12 gb",
+      "battary": "5500mah",
+      "cam":"128mp"
+    },
+    {
+      "image": "5.jpg",
+      "name": "IPHONE 12",
+      "price": 64990 ,
+      "article": "mob5",
+      "available": true,
+      "category": "Apple",
+      "cp": "Apple A16",
+      "ozy": "8/12 gb",
+      "battary": "3560mah",
+      "cam":"32mp"
+    },
+    {
+      "image": "6.jpg",
+      "name": "Samsung Galaxy S10+",
+      "price": 19990,
+      "article": "mob6",
+      "available": true,
+      "category": "Samsung",
+      "cp": "Qualcomm Snapdragon 680",
+      "ozy": "6/12 gb",
+      "battary": "3900mah",
+      "cam":"32mp"
+    },
+    {
+      "image": "11.jpg",
+      "name": "OnePlus 5T",
+      "price": 17990,
+      "article": "mob10",
+      "available": true,
+      "category": "OnePlus",
+      "cp": "Qualcomm Snapdragon 835",
+      "ozy": "4 gb",
+      "battary": "4500mah",
+      "cam":"64mp"
+    },
+    {
+      "image": "12.jpg",
+      "name": "OnePlus 7 PRO",
+      "price": 24990,
+      "article": "mob12",
+      "available": true,
+      "category": "OnePlus",
+      "cp": "Qualcomm Snapdragon 955",
+      "ozy": "6/12 gb",
+      "battary": "4500mah",
+      "cam":"64mp"
+    },
+    {
+      "image": "10.jpg",
+      "name": "OnePlus 10 PRO",
+      "price": 57990,
+      "article": "mob11",
+      "available": true,
+      "category": "OnePlus",
+      "cp": "Qualcomm Snapdragon 985",
+      "ozy": "8 gb",
+      "battary": "4900mah",
+      "cam":"128mp"
     }
   ]
 }

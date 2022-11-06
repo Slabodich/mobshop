@@ -63,7 +63,8 @@
                     {name: 'Все', value: 'all'},
                     {name: 'Samsung', value: 'sPh'},
                     {name: 'Iphone', value: 'iPh'},
-                    {name: 'Xiaomi', value: 'xPh'}
+                    {name: 'Xiaomi', value: 'xPh'},
+                    {name: 'OnePlus', value: 'OPh'}
                 ],
                 selected:'Все',
                 sortedProducts: [],
