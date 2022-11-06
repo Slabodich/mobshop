@@ -7,14 +7,14 @@
         <h1>Catalog</h1>
         <div class="v-catalog__filters">
             <v-select
+                    :selected="selected"
                     :options="categories"
                     @select="sortByCatigories"
-                    :selected="selected"
             />
             <div class="v-catalog__range-slider">
                 <input
                         type="range"
-                        min="10000"
+                        min="0"
                         max="100000"
                         step="1000"
                         v-model.number="minPrice"
@@ -22,7 +22,7 @@
                 >
                 <input
                         type="range"
-                        min="10000"
+                        min="0"
                         max="100000"
                         step="1000"
                         v-model.number="maxPrice"
@@ -62,9 +62,9 @@
                 categories: [
                     {name: 'Все', value: 'all'},
                     {name: 'Samsung', value: 'sPh'},
-                    {name: 'Iphone', value: 'iPh'},
+                    {name: 'Apple', value: 'iPh'},
                     {name: 'Xiaomi', value: 'xPh'},
-                    {name: 'OnePlus', value: 'OPh'}
+                    {name: 'OnePlus', value: 'oPh'}
                 ],
                 selected:'Все',
                 sortedProducts: [],
@@ -92,7 +92,7 @@
               'ADD_TO_CART'
           ]),
             setRangeSlider(){
-              if(this.minPrice >this.maxPrice){
+              if(this.minPrice > this.maxPrice){
                   let tmp = this.maxPrice
                   this.maxPrice = this.minPrice
                   this.minPrice = tmp

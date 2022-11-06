@@ -8,6 +8,7 @@
                 :popUpTitle="product_data.name"
                 @addBtnAction="addToCart"
         >
+
             <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="webp">
             <div>
                 <p class="v-catalog-item__name">{{product_data.name}}</p>
@@ -27,7 +28,9 @@
             Show info
         </button>
         <button
-                class="v-catalog-item__add_to_cart_btn btn" @click="addToCart">
+                class="v-catalog-item__add_to_cart_btn btn"
+                @click="addToCart"
+        >
             Add to cart
         </button>
     </div>
@@ -83,6 +86,7 @@
      }
      &__image{
          width: 200px;
+         height: 230px;
      }
      &__show-info{
          margin-right: $margin;

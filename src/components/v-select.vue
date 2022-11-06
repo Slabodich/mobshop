@@ -53,9 +53,6 @@
          mounted(){
              document.addEventListener('click', this.hideSelect.bind(this), true)
          },
-         beforeUnmount(){
-             document.removeEventListener('click'.this.hideSelect)
-         }
     }
 </script>
 

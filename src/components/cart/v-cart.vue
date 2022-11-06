@@ -26,14 +26,6 @@
         components:{
           vCartItem
         },
-        props: {
-          /* cart_data: {
-                type: Array,
-                default() {
-                    return []
-                }
-            }*/
-        },
         methods: {
             ...mapActions([
                 'DELETE_FROM_CART',
