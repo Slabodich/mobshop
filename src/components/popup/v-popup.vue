@@ -109,8 +109,8 @@
             border: none;
             background: $bg-delete;
         }
-    }
-    .material-icons{
-        cursor: pointer;
+        i{
+            cursor: pointer;
+        }
     }
 </style>

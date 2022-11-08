@@ -4,6 +4,10 @@
             <div class="v-catalog__link_to_cart">Cart: {{CART.length}}</div>
         </router-link>
 
+        <v-notification
+            :messages="messages"
+        />
+
         <h1>Catalog</h1>
         <div class="v-catalog__filters">
             <v-select
@@ -50,12 +54,14 @@
     import vCatalogItem from './v-catalog-item'
     import vSelect from '../v-select'
     import {mapActions, mapGetters} from 'vuex'
+    import vNotification from '../notification/v-notification'
 
     export default {
         name: "v-catalog",
         components: {
             vCatalogItem,
-            vSelect
+            vSelect,
+            vNotification
         },
         data(){
             return {
@@ -69,7 +75,8 @@
                 selected:'Все',
                 sortedProducts: [],
                 minPrice:'0',
-                maxPrice:'100000'
+                maxPrice:'100000',
+                messages: []
             }
         },
         computed: {
@@ -115,6 +122,12 @@
             },
             addToCart(data){
               this.ADD_TO_CART(data)
+                .then(() => {
+                    let timeStemp = Date.now().toLocaleString()
+                    this.messages.unshift(
+                        { name: 'The product has been added to the cart', id: timeStemp}
+                    )
+                })
             },
 
         },
