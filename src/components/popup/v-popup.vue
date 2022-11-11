@@ -71,13 +71,14 @@
     .popup_wrapper{
         background: rgba(64,64,64,.4);
         display: flex;
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
         justify-content: center;
         align-items: center;
+        z-index: 4;
     }
     .v-popup{
         padding: $padding*2;
@@ -86,7 +87,6 @@
         width: 400px;
         background: #ffffff;
         box-shadow: 0 0 17px 0 #e7e7e7;
-        z-index: 10;
         &__header, &__footer{
             display: flex;
             justify-content: space-between;
